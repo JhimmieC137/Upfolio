@@ -238,7 +238,7 @@
   });
 
  /**
-   * Testimonials slider
+   * Team slider
    */
   new Swiper('.team-slider', {
     speed: 600,

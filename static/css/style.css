@@ -873,31 +873,31 @@ section {
   overflow: hidden;
 }
 .testimonials .testimonial-item {
-  box-sizing: content-box;
-  padding: 30px 30px 0 30px;
-  margin: 30px 15px;
+  /* box-sizing: content-box;
+  padding: 70px 30px 0 30px;
+  margin: 50px 30px; */
   text-align: center;
-  min-height: 350px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  /* min-height: 500px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); */
 }
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
+  width: 300px;
+  border-radius: 650%;
   border: 4px solid #fff;
   margin: 0 auto;
 }
-.testimonials .testimonial-item h3 {
+/* .testimonials .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #111;
-}
-.testimonials .testimonial-item h4 {
+} */
+/* .testimonials .testimonial-item h4 {
   font-size: 14px;
   color: #999;
   margin: 0;
-}
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+} */
+/* .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
   color: #ecaedd;
   font-size: 26px;
 }
@@ -905,8 +905,8 @@ section {
   display: inline-block;
   left: -5px;
   position: relative;
-}
-.testimonials .testimonial-item .quote-icon-right {
+} */
+/* .testimonials .testimonial-item .quote-icon-right {
   display: inline-block;
   right: -5px;
   position: relative;
@@ -915,7 +915,7 @@ section {
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
-}
+} */
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -1089,17 +1089,34 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
+.team .team-slider {
   background: #fff;
   padding: 60px 0;
 }
-.team .member {
+
+.team .member{
+  box-sizing: content-box;
+  padding: 30px 30px 0 30px;
+  margin: 30px 15px;
+  text-align: center;
+  min-height: 350px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.team .team-item .team-img {
+  width: 300px;
+  border-radius: 400%;
+  /* border: 4px solid #fff; */
+  /* margin: 0 auto; */
+}
+
+/* .team .member {
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 5px;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
+} */
 .team .member .member-img {
   position: relative;
   overflow: hidden;
