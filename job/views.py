@@ -12,14 +12,14 @@ def home(request):
 
 
 def index(request):
-    Information = Info.objects.all()
+    information = Info.objects.all()
     team = Team.objects.all()
-    # image = pics[(1)]
-    # icon = image   
-    return render(request, 'index.html', {'Information' : Information, 'team' : team})
+    return render(request, 'index.html', {'information' : information, 'team' : team})
 
 def about_upfolio(request):
-    return render(request, 'about_upfolio.html')
+    Information = Info.objects.all()
+    team = Team.objects.all()
+    return render(request, 'about_upfolio.html', {'Information' : Information, 'team' : team})
 
 def volunteers(request):
     return render(request, 'volunteers.html')
