@@ -21,6 +21,12 @@ def about_upfolio(request):
     team = Team.objects.all()
     return render(request, 'about_upfolio.html', {'Information' : Information, 'team' : team})
 
+def team(request):
+    return render(request, 'team.html')
+
+def mailing_list_form(request):
+    return render(request, 'mailing_list_form.html')
+
 def volunteers(request):
     return render(request, 'volunteers.html')
 

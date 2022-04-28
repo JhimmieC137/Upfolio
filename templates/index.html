@@ -63,11 +63,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/job/about_upfolio">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="/job/about_upfolio">About Us</a></li>
+          {% comment %} <li><a class="nav-link scrollto" href="#services">Services</a></li> {% endcomment %}
           {% comment %} <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> {% endcomment %}
           {% comment %} <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> {% endcomment %}
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="/job/team">The Team</a></li>
           <li class="dropdown"><a href="#"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Job Vacancies</a></li>
@@ -86,7 +86,7 @@
               <li><a href="#">Fellowship Programs</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Subscribe to our Mailing List</a></li>
+          <li><a class="nav-link scrollto" href="/job/mailing_list_form">Subscribe to our Mailing List</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -184,7 +184,7 @@
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="/job/about_upfolio" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
@@ -420,12 +420,12 @@
         <div class="row portfolio-container" data-aos="fade-up">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{% static 'img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="{% static 'img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt=""><a href="https://google.com"></div>
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{% static 'img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>Tony Elumelu Fund(TEF) program </h4>
+              <p>16th - 17th, December 2019</p>
+              <a href="{% static 'img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              <a href="https://google.com" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 

@@ -1,0 +1,229 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Favicons -->
+    <link rel="icon" href="{% static 'img/icons/Favicon.ico'%}"  type = "image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/icons/Favicon.ico'%}" > 
+
+    <!-- Title Page-->
+    <title>UPFOLIO</title>
+
+    <!-- Icons font CSS-->
+    <link href="{% static 'vendor2/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor2/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor2/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor2/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'css3/intlTelInput.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css" rel="stylesheet' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Main CSS-->
+    <link href="{% static 'css2/main.css' %}" rel="stylesheet" media="all">
+    
+    <!-- Auxillary CSS-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <div class="logo"><img src="{% static 'img/icons/logo.png' %}" class="img-fluid" alt=""></div>
+                
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                <li><a class="nav-link" href="/job/index">Home</a></li>
+                <li><a class="nav-link " href="/job/about_upfolio">About Us</a></li>
+                {% comment %} <li><a class="nav-link scrollto" href="#services">Services</a></li> {% endcomment %}
+                {% comment %} <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> {% endcomment %}
+                {% comment %} <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> {% endcomment %}
+                <li><a class="nav-link" href="/job/team">The Team</a></li>
+                <li class="dropdown"><a href="#"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                    <li><a href="#">Job Vacancies</a></li>
+                    {% comment %} <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                        <li><a href="#">Deep Drop Down 1</a></li>
+                        <li><a href="#">Deep Drop Down 2</a></li>
+                        <li><a href="#">Deep Drop Down 3</a></li>
+                        <li><a href="#">Deep Drop Down 4</a></li>
+                        <li><a href="#">Deep Drop Down 5</a></li>
+                        </ul>
+                    </li> {% endcomment %}
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Grants</a></li>
+                    <li><a href="#">Competitions</a></li>
+                    <li><a href="#">Fellowship Programs</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link active" href="/job/mailing_list_form">Subscribe to our Mailing List</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <div class="page-wrapper bg-gra-02 p-t-100 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Register to subscribe </h2>
+                    <form method="POST">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group-icon">
+                                    <label class="label">first name</label>
+                                    <input class="input--style-4" type="text" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group-icon">
+                                    <label class="label">last name</label>
+                                    <input class="input--style-4" type="text" name="last_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Birthday</label>
+                                    <div class="input-group">
+                                        <input class="input--style-4 " type="date" name="birthday">
+                                        {% comment %} <i class="zmdi zmdi-calendar-note input-icon"></i> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-30">
+                                        <label class="radio-container m-l-45 m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <div class="input-group">
+                                        <input class="input--style-4" type="email" name="email" placeholder="example@yourmail.com">
+                                        <i class="fa fa-envelope input-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number (WhatsApp)</label>
+                                    <input class="input--style-4" type="tel" name="phone" id="phone">
+                                    {% comment %} <span class="input-group-addon"></span> {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-1">
+                                <div class="input-group">
+                                    <label class="label">Address</label>
+                                    <div class="input-group">
+                                        <input class="input--style-4" type="text" name="address">
+                                        <i class="fa fa-map-marker input-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %} <div class="input-group">
+                            <label class="label">Subject</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject">
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>Subject 1</option>
+                                    <option>Subject 2</option>
+                                    <option>Subject 3</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div> {% endcomment %}
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor2/jquery/jquery.min.js' %}"></script>
+
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor2/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor2/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor2/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js2/global.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <script src="{% static 'js3/intlTelInput.js' %}"></script>
+        <script>
+        // Vanilla Javascript
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input,({
+            preferredCountries: ["ng", "ke", "gh", "tg" ]
+        }));
+
+        $(document).ready(function() {
+            $('.iti__flag-container').click(function() { 
+            var countryCode = $('.iti__selected-flag').attr('title');
+            var countryCode = countryCode.replace(/[^0-9]/g,'')
+            $('#phone').val("");
+            $('#phone').val("+"+countryCode+" "+ $('#phone').val());
+            });
+        });
+    </script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
