@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #080808;
+  background: #e32db5;
   color: rgb(255, 255, 255);
 }
 .back-to-top.active {
