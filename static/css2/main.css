@@ -280,6 +280,20 @@ h6 {
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
 }
 
+.btn-2 {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 25px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
 .btn--radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -304,6 +318,20 @@ h6 {
 
 .btn--green:hover {
   background: #f7d516;
+  /* animation: pulsate 1s ease-in-out; */
+}
+
+/* @Keyframes pulsate {
+  0%{
+    box-shadow:
+    0 0 25px #c846ac,
+    0 0 50px #950665
+  }
+} */
+
+.btn--red {
+  background: #df0c0cb7;
+  color: #fff;
 }
 
 .btn--blue {
@@ -315,6 +343,28 @@ h6 {
   color: #fff;
 }
 
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+.hide {
+  display: none;
+}
 /* ==========================================================================
    #DATE PICKER
    ========================================================================== */
@@ -428,6 +478,14 @@ input {
 .label {
   font-size: 16px;
   color: #555;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.label-2 {
+  font-size: 16px;
+  color: rgb(209, 1, 1);
   text-transform: capitalize;
   display: block;
   margin-bottom: 5px;

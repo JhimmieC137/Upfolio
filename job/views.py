@@ -1,9 +1,11 @@
 # from tkinter import Image
 from email.mime import image
 from tkinter import image_names
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import request
 from .models import Info, Team
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -23,9 +25,6 @@ def about_upfolio(request):
 
 def team(request):
     return render(request, 'team.html')
-
-def mailing_list_form(request):
-    return render(request, 'mailing_list_form.html')
 
 def volunteers(request):
     return render(request, 'volunteers.html')
