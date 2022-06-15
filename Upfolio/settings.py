@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'job',
     'accounts',
+    'phonenumber_field',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -121,9 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'statics/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'                    
+    BASE_DIR / 'statics'                    
 ]
 STATIC_ROOT = BASE_DIR/ 'assets'
 

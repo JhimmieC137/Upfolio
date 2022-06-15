@@ -64,29 +64,18 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="/job/about_upfolio">About Us</a></li>
-          {% comment %} <li><a class="nav-link scrollto" href="#services">Services</a></li> {% endcomment %}
-          {% comment %} <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> {% endcomment %}
-          {% comment %} <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> {% endcomment %}
-          <li><a class="nav-link scrollto" href="/job/team">The Team</a></li>
-          <li class="dropdown"><a href="#"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Job Vacancies</a></li>
-              {% comment %} <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> {% endcomment %}
-              <li><a href="#">Scholarships</a></li>
-              <li><a href="#">Grants</a></li>
-              <li><a href="#">Competitions</a></li>
-              <li><a href="#">Fellowship Programs</a></li>
+              <li><a href="/job/job_vacancies">Job Vacancies</a></li>
+              <li><a href="/job/internships">Internships</a></li>
+              <li><a href="/job/grants">Grants</a></li>
+              <li><a href="/job/online_courses">Online Courses</a></li>
+              <li><a href="/job/scholarships">Scholarships</a></li>
+              <li><a href="/job/fellowships">Fellowship Programs</a></li>
+              <li><a href="/job/competitions">Competitions</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="/accounts/mailing_list_form">Subscribe to our Mailing List</a></li>
+          <li><a class="nav-link scrollto" href="/job/mailing_list_form">Join our Community</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -96,7 +85,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-    <div id="heroCarousel" data-bs-interval="10000" class="container carousel carousel-fade" data-bs-ride="carousel">
+    <div id="heroCarousel" data-bs-interval="6000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
       <!-- Slide 1 -->
         <div class="carousel-item active">
@@ -117,7 +106,7 @@
       </div> {% endcomment %}
 
       <!-- Slide 3 -->
-      {% for x in Information %}
+      {% for x in information %}
 
       <div class="carousel-item">
         <div class="carousel-container">
@@ -414,13 +403,13 @@
           <li data-filter="*" class="filter-active">All</li>
           <li data-filter=".filter-app">Information Sessions</li>
           <li data-filter=".filter-card">Programs</li>
-          <li data-filter=".filter-web">Outreach</li>
+          <li data-filter=".filter-web">Articles</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{% static 'img/portfolio/TMWF program.jpg' %}" class="img-fluid" alt=""><a href="https://drive.google.com/file/d/1I4PAZFsgPZVqZxPm-wP_tGcLtSKsPxWS/view?usp=sharing"></div>
+            <div class="portfolio-img"><img src="{% static 'img/TMWF program.jpg' %}" class="img-fluid" alt=""><a href="https://drive.google.com/file/d/1I4PAZFsgPZVqZxPm-wP_tGcLtSKsPxWS/view?usp=sharing"></div>
             <div class="portfolio-info">
               <h4>Tony Elumelu Fund(TEF) program </h4>
               <p>16th - 17th, December 2019</p>
@@ -540,151 +529,12 @@
                 </div>
               </div><!-- End testimonial item -->
             {% endfor %}
-
-            {% comment %} <div class="swiper-slide">
-              <div class="testimonial-item">
-                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p> 
-                <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p> 
-                <img src="{% static 'img/testimonials/testimonials-4.jpg'%}" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>  
-                <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-            {% endcomment %}
-
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
     </section><!-- End Testimonials Section --> 
-
-    <!-- ======= Pricing Section ======= -->
-    {% comment %} <section id="pricing" class="pricing">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Pricing</h2>
-          <p>Our Competing Prices</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box" data-aos="zoom-in">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section --> {% endcomment %}
 
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
@@ -756,125 +606,7 @@
       </div>
     </section><!-- End F.A.Q Section -->
 
-    <!-- ======= Team Section ======= -->
-    {% comment %} <section id="team" class="team">
-      <div class="container">
-        <div class="team-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            {% for i in Team %}
-            <div class="swiper-slide">
-              <div class="member" data-aos="fade-up">
-                <div class="member-img">
-                  <img src="{{i.img}}" class="img-fluid" alt="">
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div> 
-                <div class="member-info">
-                  <h4>{{i.job_title}}</h4>
-                  <span>{{i.role}}</span>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            {% endfor %}
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section> {% endcomment %}
-    
-{% comment %}     
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Team</h2>
-          <p>Our Hardworking Team</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="{% static 'img/team/team-4.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section --> {% endcomment %}
-
-    <!-- ======= Contact Section ======= -->
+    {% comment %} <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
@@ -939,7 +671,7 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Contact Section --> {% endcomment %}
 
   </main><!-- End #main -->
 

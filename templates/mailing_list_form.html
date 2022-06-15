@@ -73,17 +73,18 @@
                 <ul>
                 <li><a class="nav-link" href="/job/index">Home</a></li>
                 <li><a class="nav-link " href="/job/about_upfolio">About Us</a></li>
-                <li><a class="nav-link" href="/job/team">The Team</a></li>
-                <li class="dropdown"><a href="#"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                    <li><a href="#">Job Vacancies</a></li>
-                    <li><a href="#">Scholarships</a></li>
-                    <li><a href="#">Grants</a></li>
-                    <li><a href="#">Competitions</a></li>
-                    <li><a href="#">Fellowship Programs</a></li>
+                    <li><a href="/job/job_vacancies">Job Vacancies</a></li>
+                    <li><a href="/job/internships">Internships</a></li>
+                    <li><a href="/job/grants">Grants</a></li>
+                    <li><a href="/job/online_courses">Online Courses</a></li>
+                    <li><a href="/job/scholarships">Scholarships</a></li>
+                    <li><a href="/job/fellowships">Fellowship Programs</a></li>
+                    <li><a href="/job/competitions">Competitions</a></li>
                     </ul>
                 </li>
-                <li><a class="nav-link active" href="/accounts/mailing_list_form">Subscribe to our Mailing List</a></li>
+                <li><a class="nav-link active" href="/job/mailing_list_form">Join our Community</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -189,9 +190,15 @@
                         </div>
                     </form> {% endcomment %}
                     <!-- Begin Mailchimp Signup Form -->
-    
                     <div id="mc_embed_signup">
-                        <form onsubmit="myFunction()" action="https://bit.us4.list-manage.com/subscribe/post?u=6626aa149ad8c147094e0d282&amp;id=fbdc92be1f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        {% if submitted %}
+                            <div class="label">
+                                Subscription successful!
+                            </div>
+                        {% else %}
+                        {% comment %} <form onsubmit="myFunction()" action="https://bit.us4.list-manage.com/subscribe/post?u=6626aa149ad8c147094e0d282&amp;id=fbdc92be1f" method= "post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> {% endcomment %}
+                        <form onsubmit="myFunction()" action="" method="POST" >
+                            {% csrf_token %}
                             <div id="mc_embed_signup_scroll">
                                 <h2>Subscribe</h2>
                                 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
@@ -200,7 +207,7 @@
                                         <div class="input-group ">
                                         <label class="label" for="mce-EMAIL">Your Email Address  <span class="asterisk">*</span></label>
                                             <div class="input-group ">
-                                                <input class="input--style-4" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                                {{form.email}}
                                                 <i class="fa fa-envelope input-icon"></i>
                                             </div>
                                         </div>
@@ -211,7 +218,7 @@
                                         <div class="input-group ">
                                         <label class="label" for="mce-FNAME">First Name </label>
                                             <div class="input-group">
-                                                <input class="input--style-4" type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                                                {{form.first_name}}
                                             </div>
                                         </div>
                                     </div>
@@ -219,7 +226,7 @@
                                         <div class="input-group ">
                                             <label class="label" for="mce-LNAME">Last Name </label>
                                             <div class="input-group">
-                                                <input class="input--style-4" type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                                                {{form.last_name}}
                                             </div>
                                         </div>
                                     </div>            
@@ -229,16 +236,18 @@
                                         <div class="input-group ">
                                             <label class="label" for="mce-MMERGE6">Phone Number(WhatsApp) </label>
                                             <div class="input-group">
-                                                <input class="input--style-4" type="tel" id="phone" value="" name="MMERGE6" class="" id="mce-MMERGE6">
+                                                {{form.phone}}
                                             </div>
+                                            {% for message in messages %}
+                                            <h4 class="label-2"> {{ message }} </h4>
+                                                {% endfor %}
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group ">
                                             <label class="label">Birthday</label>
                                             <div class="input-group">
-                                                <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                                {{form.birthday}}
                                             </div>
                                         </div>
                                     </div>
@@ -301,11 +310,14 @@
                             </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                             <div class="row row-space">
                                 <div class="p-t-15">
-                                    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--radius-2 btn--blue">Submit</button>
+                                    {% comment %} <input type="submit" value="Submit" class="btn btn-secondary"> {% endcomment %}
+                                    <button type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn--radius-2 btn--blue">Submit</button>
                                     {% comment %} <p class="brandingLogo"><a href="http://eepurl.com/hRYOzj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> {% endcomment %}
                                 </div>
                             </div>   
+                        
                         </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>
