@@ -36,6 +36,9 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  
+  <!-- AOS File installation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -63,7 +66,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/job/about_upfolio">About Us</a></li>
+          <li><a class="nav-link" href="/job/about_upfolio">About Us</a></li>
+          <li><a class="nav-link" href="/job/blog">Blog</a></li>
           <li class="dropdown"><a href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/job/job_vacancies">Job Vacancies</a></li>
@@ -75,6 +79,8 @@
               <li><a href="/job/competitions">Competitions</a></li>
             </ul>
           </li>
+          <li><a class="nav-link scrollto" href="/job/programs">Our Programs</a></li>
+          <li><a class="nav-link scrollto" href="/job/projects">Our Projects</a></li>
           <li><a class="nav-link scrollto" href="/job/mailing_list_form">Join our Community</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -150,7 +156,7 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
+        <div class="section-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2>About</h2>
           <p>Who we are</p>
         </div>
@@ -182,7 +188,7 @@
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
-      <div class="container">
+      <div class="container" data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease-in-sine">
 
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
@@ -211,7 +217,7 @@
           </li>
         </ul>
 
-        <div class="tab-content" data-aos="fade-up">
+        <div class="tab-content" data-aos="fade-up" data-aos-offset="50">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
@@ -318,7 +324,7 @@
     <section id="cta" class="cta">
       <div class="container">
 
-        <div class="row" data-aos="zoom-out">
+        <div class="row" data-aos="zoom-out" data-aos-offset="50">
           <div class="col-lg-9 text-center text-lg-start">
             <h3>Upfolio Intership Program</h3>
             <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -335,55 +341,42 @@
     <section id="services" class="services">
       <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
+        <div class="section-title" data-aos="zoom-out" data-aos-offset="50">
           <h2>Services</h2>
           <p>What we offer to help the youthful society</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="zoom-in-left">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in-left">
+            <div class="icon-box">
               <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
               <h4 class="title"><a href="">Opportunities</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0" data-aos="zoom-in-left" data-aos-delay="100">
+            <div class="icon-box">
               <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
               <h4 class="title"><a href="">Upfolio Resource Bank</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 " data-aos="zoom-in-left" data-aos-delay="200">
+            <div class="icon-box">
               <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
               <h4 class="title"><a href="">Read Articles from our Blog</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="zoom-in-left" data-aos-delay="300">
+            <div class="icon-box">
               <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
               <h4 class="title"><a href="">Information Session Plabacks</a></h4>
               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
             </div>
           </div>
 
-          {% comment %} <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Grants</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
-              <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Competitions</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div> {% endcomment %}
           </div>
         </div>
 
@@ -394,7 +387,7 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
+        <div class="section-title" data-aos="zoom-out" data-aos-offset="50">
           <h2>Portfolio</h2>
           <p>What we've done</p>
         </div>
@@ -507,7 +500,7 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
+        <div class="section-title" data-aos="zoom-out" >
           <h2>The Team</h2>
           <p>Meet our workforce</p>
         </div>
@@ -540,7 +533,7 @@
     <section id="faq" class="faq">
       <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
+        <div class="section-title" data-aos="zoom-out" data-aos-offset="50">
           <h2>F.A.Q</h2>
           <p>Frequently Asked Questions</p>
         </div>

@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from optparse import Option
 from xml.dom.xmlbuilder import Options
 from django.db import models
@@ -35,4 +36,11 @@ class Daily_Opportunie(models.Model):
     pic = models.ImageField(upload_to='media')
     description = models.CharField(max_length=100, null=True)
     link = models.CharField(max_length=100, null=True)
-    
+
+class Job_Vacancies(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    role = models.CharField(max_length=100, null=True)
+    job_description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)

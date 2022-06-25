@@ -14,5 +14,7 @@ urlpatterns = [
     path('fellowships/', views.fellowships, name='fellowships'),
     path('competitions/', views.competitions, name='competitions'),
     path('daily_opportunities/', views.daily_opportunities, name='daily_opportunities'),
+    path('programs/', views.programs, name='programs'),
+    path('projects/', views.projects, name='projects'),
     path("mailing_list_form/", views.mailing_list_form, name='mailing_list_form'),
 ]

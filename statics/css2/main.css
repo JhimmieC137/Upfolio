@@ -268,14 +268,14 @@ h6 {
    ========================================================================== */
 .btn {
   display: inline-block;
-  line-height: 50px;
-  padding: 0 50px;
+  line-height: 40px;
+  padding: 0 40px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
   color: #fff;
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
 }
@@ -318,6 +318,16 @@ h6 {
 
 .btn--green:hover {
   background: #f7d516;
+  /* animation: pulsate 1s ease-in-out; */
+}
+.btn--opportunities {
+  background: #c846ac;
+  color:rgb(224, 222, 222)
+}
+
+.btn--opportunities:hover {
+  background: #f7d516;
+  color:rgb(224, 222, 222)
   /* animation: pulsate 1s ease-in-out; */
 }
 

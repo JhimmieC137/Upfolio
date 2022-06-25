@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.http import request
 from django.http import HttpResponseRedirect
-from .models import Info, Team, Daily_Opportunie
+from .models import Info, Team, Daily_Opportunie, Job_Vacancies
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import SubscriptionForm
@@ -34,7 +34,8 @@ def team(request):
     return render(request, 'team.html')
 
 def job_vacancies(request):
-    return render(request, 'job_vacancies.html')
+    jobs = Job_Vacancies.objects.all() 
+    return render(request, 'job_vacancies.html', {'jobs':jobs})
 
 def internships(request):
     return render(request, 'internships.html')
@@ -57,6 +58,12 @@ def competitions(request):
 def daily_opportunities(request):
     opportunities = Daily_Opportunie.objects.all()
     return render(request, 'daily_opportunities.html', {'opportunities': opportunities})
+
+def programs(request):
+    return render(request, 'programs.html')
+
+def projects(request):
+    return render(request, 'projects.html')
 
 def mailing_list_form(request):
     submitted = False

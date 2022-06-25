@@ -45,8 +45,6 @@
 </head>
 
 <body>
-  
-  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent1 ">
@@ -63,7 +61,7 @@
         <ul>
           <li><a class="nav-link" href="/job/index">Home</a></li>
           <li><a class="nav-link" href="/job/about_upfolio">About Us</a></li>
-          <li class="dropdown"><a class="active" href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/job/job_vacancies">Job Vacancies</a></li>
               <li><a href="/job/internships">Internships</a></li>
@@ -74,7 +72,7 @@
               <li><a href="/job/competitions">Competitions</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="/job/programs">Our Programs</a></li>
+          <li><a class="nav-link scrollto active" href="/job/programs">Our Programs</a></li>
           <li><a class="nav-link scrollto" href="/job/projects">Our Projects</a></li>
           <li><a class="nav-link" href="/job/mailing_list_form">Join to our community</a></li>
         </ul>
@@ -88,23 +86,117 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Grants</h2>
+          <h2>Our Programs</h2>
         </div>
-
+        
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section> 
+    <!-- End Breadcrumbs --> 
 
     <section class="inner-page">
       <div class="container">
         <p>
-          Your General write up about grants
+          Your General write up to the introduction to Upfolio's programs and stuff
         </p>
       </div>
     </section>
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-1.jpg" %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-2.jpg" %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-3.jpg" %}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>TEF Information Session</h3>
+              <ul>
+                <li><strong>Topic: </strong>Web design</li>
+                <li><strong>Guest Speakers: </strong> Mr.Lagbaja(Ceo,ASU Company), Ms.Koin Koin(HR, Amebo.Co)</li>
+                <li><strong>Project date: </strong>01 March, 2020</li>
+                <li><strong>Link to recording: </strong><a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="portfolio-descriptions">
+            <h2>This is an example of portfolio detail</h2>
+            <p>
+              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-1.jpg" %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-2.jpg" %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static "img/portfolio/portfolio-details-3.jpg" %}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>TEF Information Session</h3>
+              <ul>
+                <li><strong>Topic: </strong>Web design</li>
+                <li><strong>Guest Speakers: </strong> Mr.Lagbaja(Ceo,ASU Company), Ms.Koin Koin(HR, Amebo.Co)</li>
+                <li><strong>Project date: </strong>01 March, 2020</li>
+                <li><strong>Link to recording: </strong><a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
