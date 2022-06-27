@@ -57,7 +57,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <div class="logo"><img src="{% static 'img/icons/logo.png' %}" class="img-fluid" alt=""></div>
+        <div class="logo"><a href="/job/index" ><img src="{% static 'img/icons/logo.png' %}" class="img-fluid" alt=""></a></div>
         {% comment %} <h1><a href="index.html">Upfolio</a></h1> {% endcomment %}
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -65,9 +65,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link" href="/job/about_upfolio">About Us</a></li>
-          <li><a class="nav-link" href="/job/blog">Blog</a></li>
+          <li><a class="nav-link" href="https://upfolio.medium.com/">Blog</a></li>
           <li class="dropdown"><a href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/job/job_vacancies">Job Vacancies</a></li>
@@ -518,7 +517,7 @@
                   <img src="{{people.img.url}}" class="testimonial-img" alt="">
                   <h3>{{people.name}}</h3>
                   <h6>{{people.job_title}}</h6>
-                  <h7>{{people.role}}</h7>
+                  <h6>{{people.role}}</h6>
                 </div>
               </div><!-- End testimonial item -->
             {% endfor %}
@@ -599,7 +598,6 @@
       </div>
     </section><!-- End F.A.Q Section -->
 
-    {% comment %} <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
@@ -615,19 +613,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Bodija, Ibadan</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>Hello@upfolio.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+234 906 7053 686</p>
               </div>
 
             </div>
@@ -636,7 +634,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="hello@theupfolio.com/" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -664,7 +662,7 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section --> {% endcomment %}
+    </section>
 
   </main><!-- End #main -->
 
@@ -674,11 +672,10 @@
       {% comment %} <h3>Selecao</h3> {% endcomment %}
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/theupfolio/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       {% comment %} <div class="copyright">
         &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved

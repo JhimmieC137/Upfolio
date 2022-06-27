@@ -44,3 +44,63 @@ class Job_Vacancies(models.Model):
     job_description = models.TextField(max_length=300, null=False)
     link = models.CharField(max_length=300, null=False)
     deadline = models.CharField(max_length=300, null=True)
+
+class Internship(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    role = models.CharField(max_length=100, null=False)
+    job_description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Grant(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    title = models.CharField(max_length=100, null=False)
+    job_description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Online_course(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    subject = models.CharField(max_length=100, null=False)
+    description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Scholarship(models.Model):
+    organisation_name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    title = models.CharField(max_length=100, null=False)
+    description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Fellowship(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Competition(models.Model):
+    organisation_name = models.CharField(max_length=50, null=False)
+    pic = models.ImageField(upload_to='media')
+    title = models.CharField(max_length=100, null=False)
+    description = models.TextField(max_length=300, null=False)
+    link = models.CharField(max_length=300, null=False)
+    deadline = models.CharField(max_length=300, null=True)
+    
+class Programs(models.Model):
+    title = models.CharField(max_length=70, null=False)
+    topic = models.TextField(max_length=100, null=False)
+    guests = models.TextField(max_length=200, null=False)
+    date = models.CharField(max_length=200, null=False)
+    link = models.CharField(max_length=500, null=False)
+    description = models.TextField(max_length=500, null=True)
+    flier_1 = models.ImageField(upload_to='media', null=True)
+    flier_2 = models.ImageField(upload_to='media', null=True)
+    flier_3 = models.ImageField(upload_to='media', null=True)
+    flier_4 = models.ImageField(upload_to='media', null=True)
+    flier_5 = models.ImageField(upload_to='media', null=True)

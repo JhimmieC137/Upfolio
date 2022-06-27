@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.http import request
 from django.http import HttpResponseRedirect
-from .models import Info, Team, Daily_Opportunie, Job_Vacancies
+from .models import Info, Team, Daily_Opportunie, Job_Vacancies, Programs
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import SubscriptionForm
@@ -15,10 +15,9 @@ import time
 from rest_framework import status
 from rest_framework.response import Response
 # Create your views here.
+
 def home(request):
     return render(request, 'home.html')
-
-
 
 def index(request):
     information = Info.objects.all()
@@ -60,7 +59,8 @@ def daily_opportunities(request):
     return render(request, 'daily_opportunities.html', {'opportunities': opportunities})
 
 def programs(request):
-    return render(request, 'programs.html')
+    programs = Programs.objects.all()
+    return render(request, 'programs.html', {'programs': programs})
 
 def projects(request):
     return render(request, 'projects.html')
