@@ -37,7 +37,8 @@ def job_vacancies(request):
     return render(request, 'job_vacancies.html', {'jobs':jobs})
 
 def internships(request):
-    return render(request, 'internships.html')
+    jobs = Job_Vacancies.objects.all() 
+    return render(request, 'internships.html', {'jobs':jobs})
 
 def grants(request):
     return render(request, 'grants.html')
@@ -54,6 +55,12 @@ def fellowships(request):
 def competitions(request):
     return render(request, 'competitions.html')
 
+def volunteering(request):
+    return render(request, 'volunteering.html')
+
+def fully_funded_programs(request):
+    return render(request, 'fully_funded_programs.html')
+
 def daily_opportunities(request):
     opportunities = Daily_Opportunie.objects.all()
     return render(request, 'daily_opportunities.html', {'opportunities': opportunities})
@@ -66,26 +73,30 @@ def projects(request):
     return render(request, 'projects.html')
 
 def mailing_list_form(request):
-    submitted = False
-    if request.method == "POST":
-        form = SubscriptionForm(request.POST)
-        if form.is_valid():
-            form.save()
-            url = 'https://bit.us4.list-manage.com/subscribe/post?u=6626aa149ad8c147094e0d282&amp;id=fbdc92be1f'
-            payload = {'Token':'My-Secret_Token', 'EMAIL': request.POST.get("email"), 'FNAME':request.POST.get("first_name"), 'LNAME':request.POST.get("Last_name"), 'MMERGE6':request.POST.get("phone"), 'birthday':request.POST.get("birthday") }
-            r = request.POST(url, data = payload)
-            if r .status_code == 200:
-                data =r.json()
-                return Response(data, status=status.HTTP_200_OK)
-            else:
-                return HttpResponseRedirect(reverse("mailing_list_form") + '?submitted=True')
-        else:
-            messages.info(request,'Please enter a valid Phone number')
-            print("Something's wrong", form)
-    else:
-        form = SubscriptionForm
-        if 'submitted' in request.GET:
-            submitted=True
-            print("I'm Here!!!")
+    # submitted = False
+    # if request.method == "POST":
+    #     form = SubscriptionForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return HttpResponseRedirect(reverse("mailing_list_form") + '?submitted=True')
+    #         # url = 'https://bit.us4.list-manage.com/subscribe/post?u=6626aa149ad8c147094e0d282&amp;id=fbdc92be1f'
+    #         # payload = {'Token':'My-Secret_Token', 'EMAIL': request.POST.get("email"), 'FNAME':request.POST.get("first_name"), 'LNAME':request.POST.get("Last_name"), 'MMERGE6':request.POST.get("phone"), 'birthday':request.POST.get("birthday") }
+    #         # r = request.POST(url, data = payload)
+    #         # if r .status_code == 200:
+    #         #     data =r.json()
+    #         #     return Response(data, status=status.HTTP_200_OK)
+    #         # else:
+    #         #     return HttpResponseRedirect(reverse("mailing_list_form") + '?submitted=True')
+    #     else:
+    #         messages.info(request,'Please enter a valid Phone number')
+    #         print("Something's wrong", form)
+    # else:
+    #     form = SubscriptionForm
+    #     if 'submitted' in request.GET:
+    #         submitted=True
+    #         print("I'm Here!!!")
             
-    return render(request, 'mailing_list_form.html', {'form':form, 'submitted':submitted})
+    return render(request, 'mailing_list_form.html')
+
+def contact_us(request):
+    return render(request, 'contact_us.html')

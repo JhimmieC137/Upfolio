@@ -28,11 +28,11 @@ class Subscribe(models.Model):
     first_name = models.CharField(max_length=100, null=True)
     last_name = models.CharField(max_length=100, null=True)
     phone = PhoneNumberField()
-    birthday = models.CharField(max_length=15, null=True)
+    # birthday = models.CharField(max_length=15, null=True)
 
 
 class Daily_Opportunie(models.Model):
-    name = models.CharField(max_length=20, null=False)
+    name = models.CharField(max_length=30, null=False)
     pic = models.ImageField(upload_to='media')
     description = models.CharField(max_length=100, null=True)
     link = models.CharField(max_length=100, null=True)

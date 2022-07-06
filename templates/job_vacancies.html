@@ -68,7 +68,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="/job/about_upfolio">About Us</a></li>
-          <li><a class="nav-link" href="https://upfolio.medium.com/">Blog</a></li>
+          <li><a class="nav-link" href="https://upfolio.medium.com/" target="_blank">Blog</a></li>
           <li class="dropdown"><a class="active" href="/job/daily_opportunities"><span>Daily Opportunities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/job/job_vacancies">Job Vacancies</a></li>
@@ -78,11 +78,14 @@
               <li><a href="/job/scholarships">Scholarships</a></li>
               <li><a href="/job/fellowships">Fellowship Programs</a></li>
               <li><a href="/job/competitions">Competitions</a></li>
+              <li><a href="/job/volunteering">Volunteering</a></li>
+              <li><a href="/job/fully_funded_programs">Fully Funded Programs</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="/job/programs">Our Programs</a></li>
           <li><a class="nav-link scrollto" href="/job/projects">Our Projects</a></li>
           <li><a class="nav-link" href="/job/mailing_list_form">Join to our community</a></li>
+          <li><a class="nav-link" href="/job/contact_us">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -111,7 +114,7 @@
     </section>
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="" class="services">
       {% for job in jobs %}
       <div class="container">
         <div class=""> 
@@ -120,7 +123,9 @@
               <div class="opportunity_description_img"><a  href="{{job.link}}"><img src="{{job.pic.url}}" class="img-fluid"></a></div> 
             </div>
             <div class="col-sm-9">
-              <h3 class="opportunities_title"><a href="{{job.link}}">{{job.role}}</a></h3>
+              <h3 class="opportunities_title"><a href="{{job.link}}"><strong>{{job.name}}</strong></a></h3>
+              <br>
+              <h5 class="opportunities_role">Role : {{job.role}}</h5>
               <br>
               <p class="opportunities_description">{{job.job_description}}</p>
               <br>
@@ -139,26 +144,72 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      {% comment %} <h3>Selecao</h3> {% endcomment %}
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links">
-        <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
-        <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/theupfolio/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  <footer id="footer" class="footer">
+    <div class="container bottom_border">
+      <div class="row">
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Main links</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="/job/index">Home</a></li>
+            <li><a href="https://upfolio.medium.com/" target="_blank">Blog</a></li>
+            <li><a href="/job/about_upfolio" target="_blank">About</a></li>
+            <li><a href="/job/programs" target="_blank">Our Programs</a></li>
+            <li><a href="/job/projects" target="_blank">Our Projects</a></li>
+            <li><a href="/job/mailing_list_form" target="_blank">Join Our Comunity</a></li>
+            <li><a href="/job/contact_us" target="_blank">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Daily Opportunities</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="/job/job_vacancies">Job Vacancies</a></li>
+            <li><a href="/job/internships">Internships</a></li>
+            <li><a href="/job/fellowships">Fellowship Programs</a></li>
+            <li><a href="/job/volunteering">Volunteering</a></li>
+            <li><a href="/job/scholarships">Scholarships</a></li>
+            <li><a href="/job/online_courses">Online Courses</a></li>
+            <li><a href="/job/fully_funded_programs">Fully Funded Programs</a></li>
+            <li><a href="/job/grants">Grants</a></li>
+            <li><a href="/job/competitions">Competions</a></li>
+          </ul>
+        </div>
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Events</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="#">Annivesary Picnic 2022</a></li>
+            <li><a href="#">Gallery of Doings</a></li>
+            <li><a href="#">UIP Placements</a></li>
+            <li><a href="#">Design Class 2022</a></li>
+            <li><a href="#">Annivesary Picnic 2021</a></li>
+          </ul>
+        </div>
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Forms</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="#">Upfolio Internshp Progra(UIP) Form</a></li>
+            <li><a href="#">Volunteering with Upfolio</a></li>
+            <li><a href="#">Tony Elumelu Information(TEF) 2022 Information Session Form</a></li>
+          </ul>
+        </div>
       </div>
-      {% comment %} <div class="copyright">
-        &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
+    </div>
+
+    <div class="container top_border">
+
+      <div class='row'>
+        <p>© 2022 Upfolio. All rights reserved.</p>
       </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div> {% endcomment %}
+      <div class='row'>
+        <div class='container'>
+          <div class="social-links">
+            <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/theupfolio/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href= mailto:"hello@theupfolio.com" target="_blank" class="linkedin"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer><!-- End Footer -->
 
